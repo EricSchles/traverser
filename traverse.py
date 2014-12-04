@@ -8,7 +8,6 @@ def process(file):
         print "not python file :P"
 
 for root,dir,files in os.walk(argv[1]):
-    [os.path.join(os.getcwd(),elem) for elem in root]
-    [os.path.join(os.getcwd(),elem) for elem in dir]
     for file in files:
+        file = os.path.join(root,file)
         process(file)
