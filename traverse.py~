@@ -1,0 +1,9 @@
+import os
+from sys import argv
+
+def process(file):
+    print os.path.abspath(file)
+
+for root,dir,files in os.walk(argv[1]):
+    for file in files:
+        process(file)
